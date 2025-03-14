@@ -1,23 +1,265 @@
 {
-    "products": [
-      {
-        "id": "1",
-        "nome": "Hamburguer",
-        "preco": 15.00,
-        "estoque_atual": 100,
-        "unidade_medida": "unidade",
-        "quantidade_por_venda": 1
-      },
-      {
-        "id": "2",
-        "nome": "Refrigerante",
-        "preco": 5.00,
-        "estoque_atual": 50,
-        "unidade_medida": "litros",
-        "quantidade_por_venda": 0.5
-      }
-    ],
-    "sales": [],
-    "sales_items": []
-  }
-  
+  "products": [
+    {
+      "id": "1",
+      "nome": "Pão de Queijo",
+      "preco": 3.5,
+      "estoque_atual": 2,
+      "unidade_medida": "unidade"
+    },
+    {
+      "id": "2",
+      "nome": "Coxinha",
+      "preco": 4,
+      "estoque_atual": 3,
+      "unidade_medida": "unidade"
+    },
+    {
+      "id": "3",
+      "nome": "Hambúrguer",
+      "preco": 12,
+      "estoque_atual": 1,
+      "unidade_medida": "unidade"
+    },
+    {
+      "id": "4",
+      "nome": "Refrigerante 350ml",
+      "preco": 5,
+      "estoque_atual": 1,
+      "unidade_medida": "unidade"
+    },
+    {
+      "id": "5",
+      "nome": "Suco Natural",
+      "preco": 7.5,
+      "estoque_atual": 20,
+      "unidade_medida": "litro"
+    },
+    {
+      "id": "6",
+      "nome": "Pastel de Carne",
+      "preco": 6,
+      "estoque_atual": 35,
+      "unidade_medida": "unidade"
+    },
+    {
+      "id": "7",
+      "nome": "Empada de Frango",
+      "preco": 5.5,
+      "estoque_atual": 25,
+      "unidade_medida": "unidade"
+    },
+    {
+      "id": "8",
+      "nome": "Bolo de Chocolate",
+      "preco": 8,
+      "estoque_atual": 1,
+      "unidade_medida": "fatia"
+    },
+    {
+      "id": "9",
+      "nome": "Café Expresso",
+      "preco": 4.5,
+      "estoque_atual": 50,
+      "unidade_medida": "unidade"
+    },
+    {
+      "id": "10",
+      "nome": "Cappuccino",
+      "preco": 6,
+      "estoque_atual": 40,
+      "unidade_medida": "unidade"
+    },
+    {
+      "id": "11",
+      "nome": "Bauru",
+      "preco": 10,
+      "estoque_atual": 25,
+      "unidade_medida": "unidade"
+    },
+    {
+      "id": "12",
+      "nome": "Torta de Limão",
+      "preco": 9.5,
+      "estoque_atual": 18,
+      "unidade_medida": "fatia"
+    },
+    {
+      "id": "13",
+      "nome": "Esfiha de Carne",
+      "preco": 4.75,
+      "estoque_atual": 30,
+      "unidade_medida": "unidade"
+    },
+    {
+      "id": "14",
+      "nome": "Suco Detox",
+      "preco": 8.5,
+      "estoque_atual": 22,
+      "unidade_medida": "litro"
+    },
+    {
+      "id": "15",
+      "nome": "Pizza Brotinho",
+      "preco": 14,
+      "estoque_atual": 10,
+      "unidade_medida": "unidade"
+    },
+    {
+      "id": "16",
+      "nome": "Milkshake de Morango",
+      "preco": 11.5,
+      "estoque_atual": 12,
+      "unidade_medida": "unidade"
+    },
+    {
+      "id": "17",
+      "nome": "Hot Dog",
+      "preco": 9,
+      "estoque_atual": 20,
+      "unidade_medida": "unidade"
+    },
+    {
+      "id": "18",
+      "nome": "Batata Frita",
+      "preco": 8,
+      "estoque_atual": 25,
+      "unidade_medida": "porção"
+    },
+    {
+      "id": "19",
+      "nome": "Chá Gelado",
+      "preco": 5.5,
+      "estoque_atual": 30,
+      "unidade_medida": "unidade"
+    },
+    {
+      "id": "20",
+      "nome": "Brownie",
+      "preco": 6.5,
+      "estoque_atual": 18,
+      "unidade_medida": "unidade"
+    }
+  ],
+  "sales": [
+    {
+      "id": "1",
+      "total": 35,
+      "data": "2025-03-14T10:00:00Z",
+      "usuario_id": "1",
+      "items": [
+        {
+          "id": "1",
+          "produto_id": "1",
+          "quantidade": 2,
+          "preco_unitario": 3.5,
+          "subtotal": 7
+        },
+        {
+          "id": "2",
+          "produto_id": "3",
+          "quantidade": 1,
+          "preco_unitario": 12,
+          "subtotal": 12
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "total": 16.5,
+      "data": "2025-03-14T12:00:00Z",
+      "usuario_id": "1",
+      "items": [
+        {
+          "id": "3",
+          "produto_id": "2",
+          "quantidade": 1,
+          "preco_unitario": 4,
+          "subtotal": 4
+        },
+        {
+          "id": "4",
+          "produto_id": "7",
+          "quantidade": 2,
+          "preco_unitario": 5.5,
+          "subtotal": 11
+        }
+      ]
+    },
+    {
+      "id": "314c11d1-32ea-4673-9530-8e12d2cf1157",
+      "total": 7,
+      "data": "2025-03-14T13:52:05.956Z",
+      "usuario_id": "1",
+      "items": [
+        {
+          "id": "a8b4e278-86b7-4780-be44-eed0c9d59d10",
+          "produto_id": "1",
+          "quantidade": 2,
+          "preco_unitario": 3.5,
+          "subtotal": 7
+        }
+      ]
+    },
+    {
+      "id": "3aaf0d17-c200-44fc-a41f-3e5cc974031a",
+      "total": 12,
+      "data": "2025-03-14T13:52:24.430Z",
+      "usuario_id": "1",
+      "items": [
+        {
+          "id": "a62e6ece-37df-4a20-bf16-a9229ebfe269",
+          "produto_id": "2",
+          "quantidade": 3,
+          "preco_unitario": 4,
+          "subtotal": 12
+        }
+      ]
+    },
+    {
+      "id": "e2199a32-97cd-479c-9a3e-3b9dad41d67b",
+      "total": 12,
+      "data": "2025-03-14T13:52:39.336Z",
+      "usuario_id": "1",
+      "items": [
+        {
+          "id": "1e026bf8-9b8d-4fe1-840d-4a1a6a1b42a0",
+          "produto_id": "3",
+          "quantidade": 1,
+          "preco_unitario": 12,
+          "subtotal": 12
+        }
+      ]
+    },
+    {
+      "id": "9ec01997-619b-473f-87d4-7e2f737d40f4",
+      "total": 5,
+      "data": "2025-03-14T13:55:19.042Z",
+      "usuario_id": "1",
+      "items": [
+        {
+          "id": "536cf362-f1a3-4875-81b9-a24fb57f5563",
+          "produto_id": "4",
+          "quantidade": 1,
+          "preco_unitario": 5,
+          "subtotal": 5
+        }
+      ]
+    },
+    {
+      "id": "9c102313-fb83-4347-a35b-dc4c0423362f",
+      "total": 8,
+      "data": "2025-03-14T13:56:40.192Z",
+      "usuario_id": "1",
+      "items": [
+        {
+          "id": "a7f9fd20-552a-4829-973f-ab1413e0dd9d",
+          "produto_id": "8",
+          "quantidade": 1,
+          "preco_unitario": 8,
+          "subtotal": 8
+        }
+      ]
+    }
+  ]
+}

@@ -72,17 +72,28 @@ export const StoreProvider: React.FC<StoreProviderProps> = ({ children }) => {
     setProducts((prevProducts) =>
       prevProducts.map((product) =>
         product.id === productId
-          ? { ...product, estoque_atual: product.estoque_atual - quantity }
+          ? { ...product, estoque_atual: product.estoque_atual - quantity } // Subtrai a quantidade vendida do estoque
           : product
       )
     );
-    // Atualizar estoque do produto na API
-    fetch(`http://localhost:5000/products/${productId}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ estoque_atual: quantity }),
-    });
+  
+    // Verifica se o produto foi encontrado antes de fazer o patch na API
+    const productToUpdate = products.find(product => product.id === productId);
+    if (productToUpdate) {
+      // Atualizar estoque do produto na API
+      fetch(`http://localhost:5000/products/${productId}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          estoque_atual: productToUpdate.estoque_atual - quantity, // Envia o estoque atualizado
+        }),
+      });
+    } else {
+      console.error("Produto não encontrado para atualizar estoque");
+    }
   };
+  
+  
 
   return (
     <StoreContext.Provider value={{ products, sales, addSale, updateProductStock }}>
@@ -90,5 +101,5 @@ export const StoreProvider: React.FC<StoreProviderProps> = ({ children }) => {
     </StoreContext.Provider>
   );
 };
-export type { Product };
+export type { Product, Sale };
 
