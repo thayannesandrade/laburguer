@@ -1,5 +1,5 @@
 import React, { useEffect} from "react";
-import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { StoreProvider } from "./context/StoreContext";
 import ProductPage from "./pages/ProductPage";
 import SalesPage from "./pages/SalesPage"; 
@@ -28,7 +28,6 @@ const App: React.FC = () => {
 
   return (
     <StoreProvider>
-      <Router>
         <Layout style={{ minHeight: "100vh" }}>
           <Sider width={200} theme="dark">
             <Menu mode="inline" defaultSelectedKeys={['1']} style={{ height: "100%", borderRight: 0 }}>
@@ -55,7 +54,6 @@ const App: React.FC = () => {
             </Content>
           </Layout>
         </Layout>
-      </Router>
     </StoreProvider>
   );
 };
