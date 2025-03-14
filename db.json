@@ -1,0 +1,23 @@
+{
+    "products": [
+      {
+        "id": "1",
+        "nome": "Hamburguer",
+        "preco": 15.00,
+        "estoque_atual": 100,
+        "unidade_medida": "unidade",
+        "quantidade_por_venda": 1
+      },
+      {
+        "id": "2",
+        "nome": "Refrigerante",
+        "preco": 5.00,
+        "estoque_atual": 50,
+        "unidade_medida": "litros",
+        "quantidade_por_venda": 0.5
+      }
+    ],
+    "sales": [],
+    "sales_items": []
+  }
+  
