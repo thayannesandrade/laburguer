@@ -1,16 +1,31 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React, { useEffect} from "react";
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import { StoreProvider } from "./context/StoreContext";
 import ProductPage from "./pages/ProductPage";
-import SalesPage from "./pages/SalesPage"; // Página de vendas que você vai criar
+import SalesPage from "./pages/SalesPage"; 
 
 import { Layout, Menu } from "antd";
 import { HomeOutlined, FileDoneOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
+
 const { Sider, Content } = Layout;
 
 const App: React.FC = () => {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/products" || location.pathname === "/") {
+      document.title = "LaBurguer - Produtos";
+    } else if (location.pathname === "/sales") {
+      document.title = "LaBurguer - Vendas";
+    } else {
+      document.title = "LaBurguer";
+    }
+  }, [location]);
+
+
   return (
     <StoreProvider>
       <Router>
